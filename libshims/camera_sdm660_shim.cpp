@@ -8,4 +8,7 @@ namespace android {
             void** vaddr) {
         _ZN7android13GraphicBuffer4lockEjPPvPiS3_(thisptr, inUsage, vaddr, nullptr, nullptr);
     }
+
+    extern "C" void _ZN7android6Parcel17writeUint64VectorERKNSt3__16vectorIyNS1_9allocatorIyEEEE() { };
+    extern "C" void _ZNK7android6Parcel16readUint64VectorEPNSt3__16vectorIyNS1_9allocatorIyEEEE() { };
 }
