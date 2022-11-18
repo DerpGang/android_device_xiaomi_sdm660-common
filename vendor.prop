@@ -205,3 +205,8 @@ vendor.usb.rndis.func.name=rndis_bam
 
 # Zygote
 zygote.critical_window.minute=10
+
+# SF
+ro.surface_flinger.set_idle_timer_ms=80
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.set_display_power_timer_ms=1000
