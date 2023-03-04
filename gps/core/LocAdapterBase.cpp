@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2014, 2016-2019 The Linux Foundation. All rights reserved.
+/* Copyright (c) 2011-2014, 2016-2020 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -26,6 +26,43 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
+
+/*
+Changes from Qualcomm Innovation Center are provided under the following license:
+
+Copyright (c) 2022, 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted (subject to the limitations in the
+disclaimer below) provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+
+    * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 #define LOG_NDEBUG 0
 #define LOG_TAG "LocSvc_LocAdapterBase"
 
@@ -43,13 +80,20 @@ namespace loc_core {
 // the right locApi should get created.
 LocAdapterBase::LocAdapterBase(const LOC_API_ADAPTER_EVENT_MASK_T mask,
                                ContextBase* context, bool isMaster,
-                               LocAdapterProxyBase *adapterProxyBase) :
-    mIsMaster(isMaster),
-    mIsEngineCapabilitiesKnown(ContextBase::sIsEngineCapabilitiesKnown),
-    mEvtMask(mask), mContext(context), mLocApi(context->getLocApi()),
-    mLocAdapterProxyBase(adapterProxyBase), mMsgTask(context->getMsgTask())
+                               LocAdapterProxyBase *adapterProxyBase,
+                               bool waitForDoneInit) :
+    mIsMaster(isMaster), mEvtMask(mask), mContext(context),
+    mLocApi(context->getLocApi()), mLocAdapterProxyBase(adapterProxyBase),
+    mMsgTask(context->getMsgTask()),
+    mIsEngineCapabilitiesKnown(ContextBase::sIsEngineCapabilitiesKnown)
 {
-    mLocApi->addAdapter(this);
+    LOC_LOGd("waitForDoneInit: %d", waitForDoneInit);
+    if (!waitForDoneInit) {
+        mLocApi->addAdapter(this);
+        mAdapterAdded = true;
+    } else {
+        mAdapterAdded = false;
+    }
 }
 
 uint32_t LocAdapterBase::mSessionIdCounter(1);
@@ -178,6 +222,10 @@ DEFAULT_IMPL()
 void LocAdapterBase::reportGnssSvTypeConfigEvent(const GnssSvTypeConfig& /*config*/)
 DEFAULT_IMPL()
 
+void LocAdapterBase::reportGnssConfigEvent(uint32_t,  /* session id*/
+            const GnssConfig& /*gnssConfig*/)
+DEFAULT_IMPL()
+
 bool LocAdapterBase::
     requestOdcpiEvent(OdcpiRequestInfo& /*request*/)
 DEFAULT_IMPL(false)
@@ -302,6 +350,28 @@ LocAdapterBase::getCapabilities()
         if (ContextBase::isFeatureSupported(LOC_SUPPORTED_FEATURE_LOCATION_PRIVACY)) {
             mask |= LOCATION_CAPABILITIES_PRIVACY_BIT;
         }
+        if (ContextBase::isFeatureSupported(LOC_SUPPORTED_FEATURE_MEASUREMENTS_CORRECTION)) {
+            mask |= LOCATION_CAPABILITIES_MEASUREMENTS_CORRECTION_BIT;
+        }
+        if (ContextBase::isFeatureSupported(LOC_SUPPORTED_FEATURE_ROBUST_LOCATION)) {
+            mask |= LOCATION_CAPABILITIES_CONFORMITY_INDEX_BIT;
+        }
+        if (ContextBase::isFeatureSupported(LOC_SUPPORTED_FEATURE_EDGNSS)) {
+            mask |= LOCATION_CAPABILITIES_EDGNSS_BIT;
+        }
+        if ((ContextBase::getQwesFeatureStatus() & LOCATION_CAPABILITIES_QWES_PPE)) {
+            mask |= LOCATION_CAPABILITIES_QWES_PPE;
+        }
+        //Get QWES feature status mask
+        mask |= ContextBase::getQwesFeatureStatus();
+        //Get HW feature status mask
+        LocationHwCapabilitiesMask hwMask = ContextBase::getHwCapabilitiesMask();
+        if ((hwMask & LOCATION_WIFI_CAPABILITY_RTT) != 0) {
+            mask |= LOCATION_CAPABILITIES_WIFI_RTT_POSITIONING;
+        }
+        if ((hwMask & LOCATION_WIFI_CAPABILITY_RSSI) != 0) {
+            mask |= LOCATION_CAPABILITIES_WIFI_RSSI_POSITIONING;
+        }
     } else {
         LOC_LOGE("%s]: attempt to get capabilities before they are known.", __func__);
     }
@@ -407,5 +477,13 @@ LocAdapterBase::requestCapabilitiesCommand(LocationAPI* client)
 
     sendMsg(new MsgRequestCapabilities(*this, client));
 }
+
+void
+LocAdapterBase::reportLatencyInfoEvent(const GnssLatencyInfo& /*gnssLatencyInfo*/)
+DEFAULT_IMPL()
+
+bool LocAdapterBase::
+    reportQwesCapabilities(const std::unordered_map<LocationQwesFeatureType, bool> &/*featureMap*/)
+DEFAULT_IMPL(false)
 
 } // namespace loc_core
