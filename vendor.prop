@@ -114,6 +114,7 @@ vidc.enc.dcvs.extra-buff-count=2
 debug.cpurend.vsync=false
 debug.hwui.skia_atrace_enabled=false
 debug.sf.enable_hwc_vds=1
+debug.sf.enable_transaction_tracing=false
 debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 ro.hardware.egl=adreno
