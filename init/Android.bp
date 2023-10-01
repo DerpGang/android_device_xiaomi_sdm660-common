@@ -39,6 +39,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "fstab.zram",
+    filename: "fstab.zram",
+    src: "fstab.zram",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.fingerprint.rc",
     src: "init.fingerprint.rc",
     sub_dir: "init/hw",
