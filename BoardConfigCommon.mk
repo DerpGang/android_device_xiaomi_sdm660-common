@@ -76,9 +76,6 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
-
 # FM
 ifeq ($(BOARD_HAVE_QCOM_FM),true)
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true

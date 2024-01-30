@@ -115,9 +115,6 @@ on boot && property:persist.vendor.usb.controller.default=*
 on property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
 
-    # Touchpanel
-    chown system system /sys/touchpanel/double_tap
-
 #Peripheral manager
 service vendor.per_mgr /system/vendor/bin/pm-service
     class core
