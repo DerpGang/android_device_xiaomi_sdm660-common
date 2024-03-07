@@ -65,7 +65,6 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
-    write /dev/ipa 1
 
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
