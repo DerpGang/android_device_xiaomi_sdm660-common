@@ -113,6 +113,8 @@ vidc.enc.dcvs.extra-buff-count=2
 # Display
 debug.cpurend.vsync=false
 debug.hwui.skia_atrace_enabled=false
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
 debug.sf.enable_hwc_vds=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.hw=1
