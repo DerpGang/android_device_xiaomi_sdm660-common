@@ -60,6 +60,9 @@ TARGET_KERNEL_VERSION := 4.19
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# A/B
+AB_OTA_UPDATER := false
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
