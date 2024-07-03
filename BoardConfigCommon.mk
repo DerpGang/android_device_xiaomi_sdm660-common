@@ -119,6 +119,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
+# DeviceAsWebcam
+TARGET_USES_YCRCB_CAMERA_ENCODE := true
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
