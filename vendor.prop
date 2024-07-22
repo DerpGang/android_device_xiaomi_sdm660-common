@@ -133,6 +133,10 @@ vendor.display.enable_default_color_mode=1
 vendor.display.vds_allow_hwc=1
 vendor.gralloc.enable_fb_ubwc=1
 
+# EGL - Blobcache configuration
+ro.egl.blobcache.multifile=true
+ro.egl.blobcache.multifile_limit=33554432
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
