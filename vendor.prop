@@ -115,7 +115,6 @@ debug.cpurend.vsync=false
 debug.hwui.skia_atrace_enabled=false
 debug.hwui.target_cpu_time_percent=30
 debug.hwui.use_hint_manager=true
-debug.sf.enable_hwc_vds=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.hw=1
 debug.sf.latch_unsignaled=1
@@ -130,6 +129,7 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 ro.vendor.display.cabl=0
 vendor.display.disable_skip_validate=1
 vendor.display.enable_default_color_mode=1
+vendor.display.vds_allow_hwc=1
 vendor.gralloc.enable_fb_ubwc=1
 
 # FRP
