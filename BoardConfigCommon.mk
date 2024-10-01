@@ -137,7 +137,6 @@ PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
-BOARD_VNDK_VERSION := current
 
 # Verity
 # Only needed for signing
