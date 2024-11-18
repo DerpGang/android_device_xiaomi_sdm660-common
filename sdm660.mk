@@ -441,6 +441,7 @@ PRODUCT_COPY_FILES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
+    android.hardware.wifi@1.6.vendor \
     hostapd \
     libwifi-hal-qcom \
     libwpa_client \
