@@ -40,6 +40,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.configfs=true \
     androidboot.hardware=qcom \
     androidboot.super_partition=system \
+    androidboot.init_fatal_reboot_target=recovery \
     androidboot.usbcontroller=a800000.dwc3 \
     ehci-hcd.park=3 \
     loop.max_part=7 \
