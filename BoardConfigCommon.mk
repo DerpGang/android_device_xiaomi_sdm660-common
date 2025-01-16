@@ -34,8 +34,10 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
 # Kernel
 BOARD_KERNEL_CMDLINE := \
+    androidboot.boot_devices=soc/c0c4000.sdhci \
     androidboot.configfs=true \
     androidboot.hardware=qcom \
+    androidboot.super_partition=system \
     androidboot.usbcontroller=a800000.dwc3 \
     ehci-hcd.park=3 \
     loop.max_part=7 \
@@ -101,13 +103,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_sdm660
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-ifneq ($(AB_OTA_UPDATER), true)
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x04000000
-endif
-BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
@@ -115,7 +113,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/bt_firmware:/bt_firmware \
     /mnt/vendor/persist:/persist
 
-TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
