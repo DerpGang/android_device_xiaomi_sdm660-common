@@ -147,11 +147,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
-    gralloc.qcom
+    gralloc.sdm660
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
-    hwcomposer.qcom \
+    hwcomposer.sdm660
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
