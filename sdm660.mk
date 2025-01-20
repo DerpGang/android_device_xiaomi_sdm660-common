@@ -196,13 +196,11 @@ PRODUCT_PACKAGES += \
     liblzma.vendor:64
 
 # FM
-ifeq ($(BOARD_HAVE_QCOM_FM),true)
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
     qcom.fmradio \
     qcom.fmradio.xml
-endif
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
