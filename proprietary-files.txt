@@ -325,10 +325,10 @@ vendor/lib64/libmlipay@1.1.so|7d07b19faa36c62babf39a41b2baf8de370d706c
 # Perf - from jasmine
 vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
 
-# Peripheral manager - from jasmine
-vendor/bin/pm-proxy|bc4e972e3fe595b973197efe5114da8ff4339a59
-vendor/bin/pm-service|b0f77edfe04a3cc6284738196c0044e676d5eeb3
-vendor/lib64/libperipheral_client.so|a0dd574c8af3135adae10ef49065fa765906db7a
+# Peripheral manager - from FP3-user 13 6.A.020.0-gms-88126537 release-keys
+vendor/bin/pm-proxy|910437c11108aa66e803bbc760ce3998d141a6b4
+vendor/bin/pm-service|98827a6bf6693033a7c767e3fb4f097b9075a0ef
+vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing - from S62Pro
 vendor/bin/hw/vendor.display.color@1.0-service|a1640ca55a67e701003fa1f6f92bd127f180d2b2
