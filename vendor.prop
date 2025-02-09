@@ -155,8 +155,11 @@ ro.apk_verity.mode=2
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
-# HEH filename encryption is being dropped
+# Crypto
+ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.volume.options=::v2
 
 # IMS
 persist.dbg.volte_avail_ovr=1
