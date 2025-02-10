@@ -206,6 +206,9 @@ ro.soc.model=SDM660
 # Time
 persist.vendor.delta_time.enable=true
 
+# FM
+persist.vendor.qcom.bluetooth.soc=cherokee
+
 # USB
 ro.usb.uvc.enabled=true
 sys.usb.mtp.batchcancel=1
