@@ -564,7 +564,6 @@ vendor/lib64/libqsocket.so|622b134007f83f48e03de771905dc4310c381661
 vendor/lib64/libril-qc-logger.so|8b27b280595e40b770e42d43d37a68949c26484f
 vendor/lib64/libril-qc-ltedirectdisc.so|8c282f42e574bcab3d1e03e7a33cb8bf8711ab14
 vendor/lib64/libril-qc-radioconfig.so|f7abeb0f3e3dafa551b1e7719a3cff2229065d8e
-vendor/lib64/libril-qcril-hook-oem.so|fb9df0d1bdb03c316f860516236f100f19ea966c
 vendor/lib64/librilqmiservices.so|034225bcfc18be9195b7fdcffbaa7af28531ef82
 vendor/lib64/libsettings.so|0db00e4e102433bb10698de47adb680ea364c715
 vendor/lib64/libsystem_health_mon.so|727a6531ac2f4406660ea82ea1bee88148273f63
