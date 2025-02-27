@@ -378,10 +378,6 @@ vendor/lib64/libtinyxml2_1.so|5bdb5c7785f90ad4ebaa7085a4f83d86567331f9
 vendor/lib/hw/vulkan.adreno.so|1f6c263e550e5f467f1628dae5d00130f8501a8a
 vendor/lib64/hw/vulkan.adreno.so|2c371b131a2672c96d7ecf02bcbda954f9662879
 
-# Graphics (Vulkan) - from S62Pro
-vendor/lib/hw/vulkan.adreno.so|139868cf11006199fffc109b7a207e4e7f4cbd18
-vendor/lib64/hw/vulkan.adreno.so|9215100009b574f71dc75272f22a499302ea121d
-
 # Keymaster - from helios
 vendor/lib64/libkeymasterdeviceutils.so|fddfafd32a82fd1af090ede578152a590e1da63d
 vendor/lib64/libkeymasterprovision.so|7f198792c33d40c05a8aa26d26ee22d7b395ef00
