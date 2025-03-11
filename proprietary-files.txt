@@ -166,12 +166,12 @@ vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|c63c37d067e3009735fbc54d4603d43d7d6623e1
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
 vendor/etc/init/mutualex.rc|d6d6673e59abfdb53232d502842285bae8f323f1
-vendor/lib64/libcne.so;DISABLE_CHECKELF|01542392f828196bddb114008dcb6c6129108844
+vendor/lib64/libcne.so|01542392f828196bddb114008dcb6c6129108844
 vendor/lib64/libcneapiclient.so|f236e47a0bff1628d6ba386ae96bd6bb98d06612
 vendor/lib64/libcneoplookup.so|6d6d4c011055b928db1af56e810cacc392124d17
 vendor/lib64/libcneqmiutils.so|f38d86aecbef4b5d54bfdd9824fc9b2e82067510
 vendor/lib64/libwms.so|d6f8c42c15ecdf237b7007bca0bb3bc116518d5c
-vendor/lib64/libwqe.so;DISABLE_CHECKELF|f4c4147a706c87ba834ded08e96503f67665a993
+vendor/lib64/libwqe.so|f4c4147a706c87ba834ded08e96503f67665a993
 vendor/lib64/libxml.so|3a44eaa4d74f196b14375ce0f9d485e79b03aee9
 vendor/lib64/vendor.qti.data.factory@2.0.so|165f24084eef7aea42137f8071619a0d2bc14aa9
 vendor/lib64/vendor.qti.data.factory@2.1.so|701985f2a1d8f5415389fa7a957e9a26b4122720
@@ -272,7 +272,7 @@ vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|05931b5d088bd7000b0b002ee650b
 vendor/app/CACertService/CACertService.apk|96d4904107360910acf418e94bdde246fc1283dd
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service|b230a9f37c205574c515416fdb45c2784d46b70f
 vendor/bin/loc_launcher|6649bda3b6cea06d7fd1cc348611b0edac96b3a1
-vendor/bin/lowi-server;DISABLE_CHECKELF
+vendor/bin/lowi-server
 vendor/bin/mlid|97394fd40af15730352bdb3354346adc0e6a05f4
 vendor/bin/qcc-trd|aa91b9f9777bfc55482c8c0a7de63e2822de42f5
 vendor/bin/xtra-daemon|b16a4a5b0aa5d37ad205dbe7ce9661be18df6bc6
