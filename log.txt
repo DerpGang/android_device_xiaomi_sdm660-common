@@ -1,0 +1,57 @@
+Parsing device/xiaomi/sdm660-common/proprietary-files.txt
+Using source dump dir /home/bankersenator/12/
+Processing device/xiaomi/sdm660-common/proprietary-files.txt
+[0;32mvendor/lib/egl/eglSubDriverAndroid.so: kanged file pinned with hash e72aefcf9fa50a01f53558ea7886e2d70b3a57a9, [0m
+[0;32mvendor/lib/egl/libEGL_adreno.so: kanged file pinned with hash 4ee0c196818b5f460853f0fdea1e7c586b889c88, [0m
+[0;32mvendor/lib/egl/libGLESv1_CM_adreno.so: kanged file pinned with hash 35180cd115c1d9dcc7ed33a4add281a365d8ec9c, [0m
+[0;32mvendor/lib/egl/libGLESv2_adreno.so: kanged file pinned with hash 88dff184e6a61e033bb1a7bacb6eba4c0cb03585, [0m
+[0;32mvendor/lib/egl/libQTapGLES.so: kanged file pinned with hash 62647fc17de97ffeac871a4603134b5cc659a34d, [0m
+[0;32mvendor/lib/egl/libq3dtools_adreno.so: kanged file pinned with hash 5d25d3f8d5f5e86f6d1b83df3a15561ff257756d, [0m
+[0;32mvendor/lib/egl/libq3dtools_esx.so: kanged file pinned with hash 35ba313e7e00d40dbf0bde82a335a6f257f67a07, [0m
+[0;32mvendor/lib/hw/vulkan.sdm660.so: kanged file pinned with hash 404862c00279f222b1a9277bf773a96a605ba99b, [0m
+[0;32mvendor/lib/libC2D2.so: kanged file pinned with hash c189d8794a261824b8fdeca4e65d63eb92c0cc0a, [0m
+[0;32mvendor/lib/libCB.so: kanged file pinned with hash 40781c9f53058fdeb957fb581b22eb00fc98b9f3, [0m
+[0;32mvendor/lib/libOpenCL.so: kanged file pinned with hash 6fe1ec3442653efedf49f64aa9301e0ed91abac0, [0m
+[0;32mvendor/lib/libadreno_utils.so: kanged file pinned with hash 54eedfc81c3228ade708c4ebc8dd0cc25fcd46cf, [0m
+[0;32mvendor/lib/libbccQTI.so: kanged file pinned with hash 0be327b62b993d09953fc0758fbf19672d58d3ec, [0m
+[0;32mvendor/lib/libc2d30_bltlib.so: kanged file pinned with hash 3ff9baf59a1e1c56b91a0f509a2dfd36c9e96be2, [0m
+[0;32mvendor/lib/libdisplayconfig.qti.so: kanged file pinned with hash 3b09fa8c53eb42cffb7b970725ee10ffb8d78d4f, [0m
+[0;32mvendor/lib/libgsl.so: kanged file pinned with hash 82c39541f2486ed02ff7a8222deb402156957e5f, [0m
+[0;32mvendor/lib/libhdr_tm.so: kanged file pinned with hash 0104cdb2789ab1fb54b6b93564300f13ffeefc39, [0m
+[0;32mvendor/lib/libllvm-glnext.so: kanged file pinned with hash 017017256eda565d7c2fa1b8f2b0f5e720ddb321, [0m
+[0;32mvendor/lib/libllvm-qcom.so: kanged file pinned with hash c7af1844b19258ad6eb822fa56d0ce5fd3df232b, [0m
+[0;32mvendor/lib/libqseed3.so: kanged file pinned with hash 44f99b99b831227491e320a3098c8defe8df0781, [0m
+[0;32mvendor/lib/librs_adreno.so: kanged file pinned with hash 11eaa78d76d9f0e5f34ce5db2b08d5039171e4c9, [0m
+[0;32mvendor/lib/librs_adreno_sha1.so: kanged file pinned with hash 687de9471eaa1dab7b8180c327f0025b715cdf7e, [0m
+[0;32mvendor/lib/libsdm-color.so: kanged file pinned with hash 05e6eedb8f9656d9097a1c3cee09ceeef1025181, [0m
+[0;32mvendor/lib/libsdm-diag.so: kanged file pinned with hash f560622d31fa58c6b3ee2843d7485ddfd246d064, [0m
+[0;32mvendor/lib/libsdmextension.so: kanged file pinned with hash 2fce25b72c288730e345d7241922c10fcfc0e96e, [0m
+[0;32mvendor/lib/libtinyxml2_1.so: kanged file pinned with hash 89e1b1af10209dbb8d341cd314750cc64fc33852, [0m
+[0;32mvendor/lib64/egl/eglSubDriverAndroid.so: kanged file pinned with hash 2f5f0f8dff2e5a52f5852a9dcdb844d348b934bc, [0m
+[0;32mvendor/lib64/egl/libEGL_adreno.so: kanged file pinned with hash 881af356ca2f30d993fd2a859d1ad93a704a754f, [0m
+[0;32mvendor/lib64/egl/libGLESv1_CM_adreno.so: kanged file pinned with hash ee3604131af93e38baaf0cdff49523514cd1f1b2, [0m
+[0;32mvendor/lib64/egl/libGLESv2_adreno.so: kanged file pinned with hash dad071f2a4a31a9d33efb3b7f0d9a5f714cdb1fe, [0m
+[0;32mvendor/lib64/egl/libQTapGLES.so: kanged file pinned with hash 8a82cd42126f848b0fa2470dbcdcbe02585627a3, [0m
+[0;32mvendor/lib64/egl/libq3dtools_adreno.so: kanged file pinned with hash 07c3b406aa055abfdb3358833d02cb5133964d37, [0m
+[0;32mvendor/lib64/egl/libq3dtools_esx.so: kanged file pinned with hash 65a22fbfb7f471cd159290c4a7cc755f1a772c6c, [0m
+[0;32mvendor/lib64/hw/vulkan.sdm660.so: kanged file pinned with hash 785505bf473e486cd7ce1a034ccba46381830a6e, [0m
+[0;32mvendor/lib64/libC2D2.so: kanged file pinned with hash 802802ac7ce0bb8bfc6918449a89ec820c6cfd53, [0m
+[0;32mvendor/lib64/libCB.so: kanged file pinned with hash 73bf583b32ef7411457059bf3332a0302bbe4a69, [0m
+[0;32mvendor/lib64/libOpenCL.so: kanged file pinned with hash d6bb350254707592d6f6360c06d4c3336f8f1155, [0m
+[0;32mvendor/lib64/libadreno_utils.so: kanged file pinned with hash 7723561e4c15c8cda5639ab36c0fb80cefbad783, [0m
+[0;32mvendor/lib64/libbccQTI.so: kanged file pinned with hash 42fdea81ea505ccadbf6d24af7ba37cf83760391, [0m
+[0;32mvendor/lib64/libc2d30_bltlib.so: kanged file pinned with hash efda0093baa46c8138ac98f29d417e0b72125e24, [0m
+[0;32mvendor/lib64/libdisplayconfig.qti.so: kanged file pinned with hash 2f5b2bf23511c1e10f0daf85836b2b3d5e4271d9, [0m
+[0;32mvendor/lib64/libgsl.so: kanged file pinned with hash f96de536b890019adce81adad75edebe12bf22ee, [0m
+[0;32mvendor/lib64/libhdr_tm.so: kanged file pinned with hash 0744584d9e30a921898695c89e96293901437c08, [0m
+[0;32mvendor/lib64/libllvm-glnext.so: kanged file pinned with hash 3a4a045ea85877e814a9954ced7ec6baa8e04210, [0m
+[0;32mvendor/lib64/libllvm-qcom.so: kanged file pinned with hash f405f07c443129f0a82c87b528d690e26afcbe4e, [0m
+[0;32mvendor/lib64/libqseed3.so: kanged file pinned with hash 6779aaf96283e244122f4cc76cd3cb750ff14ed5, [0m
+[0;32mvendor/lib64/librs_adreno.so: kanged file pinned with hash 3d0a23777e7bdd979a0c84d9da731ae15d58af68, [0m
+[0;32mvendor/lib64/librs_adreno_sha1.so: kanged file pinned with hash e6069c4de97498e0ef4116e985cbbb9b4a2e283d, [0m
+[0;32mvendor/lib64/libsdm-color.so: kanged file pinned with hash 9c80ac4e059bff1c53814e9f5f71a5fbe38bce40, [0m
+[0;32mvendor/lib64/libsdm-diag.so: kanged file pinned with hash 35206a3a9b7ed56317511bb72f89fd380d848ca6, [0m
+[0;32mvendor/lib64/libsdm-disp-vndapis.so: kanged file pinned with hash a4e271a373b83b1e04afdbff63ab37154aead5f9, [0m
+[0;32mvendor/lib64/libsdmextension.so: kanged file pinned with hash fe6d0c574df498dd768f9d2e1d3fbc5c558883d0, [0m
+[0;32mvendor/lib64/libtinyxml2_1.so: kanged file pinned with hash 70942325afdd14eedcf11b3fbbfbc3d98f42f8dc, [0m
+Updating device/xiaomi/sdm660-common/proprietary-files.txt
